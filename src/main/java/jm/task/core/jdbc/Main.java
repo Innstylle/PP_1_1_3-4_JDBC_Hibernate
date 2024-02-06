@@ -36,6 +36,6 @@ public class Main {
         userService.dropUsersTable();
         System.out.println("Таблица удалена");
 
-        Util.closeSessionFactory();
+        Util.close();
     }
 }
