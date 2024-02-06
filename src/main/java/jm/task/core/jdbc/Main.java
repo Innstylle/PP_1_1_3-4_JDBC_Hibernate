@@ -17,7 +17,7 @@ public class Main {
 
         User user1 = new User("Kirill", "Astakhov", (byte) 25);
         User user2 = new User("Oleg", "Kabanov", (byte) 30);
-        User user3 = new User("Alina", "Demina", (byte) 17);
+        User user3 = new User("Katya", "Astakhova", (byte) 23);
         User user4 = new User("Dima", "Katelevsky", (byte) 19);
 
         userService.saveUser(user1.getName(),user1.getLastName(),user1.getAge());
