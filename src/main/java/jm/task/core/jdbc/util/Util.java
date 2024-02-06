@@ -60,4 +60,8 @@ public class Util {
     public static SessionFactory getSessionFactory() {
         return session;
     }
+
+    public static void closeSessionFactory() {
+        session.close();
+    }
 }

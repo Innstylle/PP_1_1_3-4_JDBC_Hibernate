@@ -5,9 +5,6 @@ import jm.task.core.jdbc.util.Util;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.intellij.lang.annotations.Language;
-
-import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
@@ -59,7 +56,6 @@ public class UserDaoHibernateImpl implements UserDao {
     public void removeUserById(long id) {
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
-//            session.createQuery("delete User where id = this.id").executeUpdate();
             User user = session.get(User.class, id);
             session.delete(user);
             session.getTransaction().commit();
