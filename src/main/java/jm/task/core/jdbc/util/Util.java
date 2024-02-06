@@ -46,7 +46,7 @@ public class Util {
             configuration.setProperty("hibernate.connection.url", url);
             configuration.setProperty("hibernate.connection.username", username);
             configuration.setProperty("hibernate.connection.password", password);
-            configuration.setProperty("hibernate.hbm2ddl.auto", "create");
+            configuration.setProperty("hibernate.hbm2ddl.auto", "create-drop");
             configuration.addAnnotatedClass(User.class);
 
             StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
