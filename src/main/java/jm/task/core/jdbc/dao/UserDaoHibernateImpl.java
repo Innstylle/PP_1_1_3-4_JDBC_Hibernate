@@ -21,10 +21,10 @@ public class UserDaoHibernateImpl implements UserDao {
     public void createUsersTable() {
         @Language("MySQL") String sql = """
                 CREATE TABLE IF NOT EXISTS users (
-                    id INT AUTO_INCREMENT PRIMARY KEY,
+                    id BIGINT AUTO_INCREMENT PRIMARY KEY,
                     name VARCHAR(50),
                     lastName VARCHAR(50),
-                    age INT
+                    age TINYINT
                 )
                 """;
         Transaction transaction = null;
